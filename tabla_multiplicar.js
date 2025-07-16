@@ -1,10 +1,19 @@
-let numero_Inicio =2, Numero_multiplicado=4
+// multiplicacion.js
+function tabla_multiplicar(inicio = 2, fin = 11, hasta = 10) {
+  let resultado = [];
 
-for(numero_Inicio, Numero_multiplicado; numero_Inicio <=11; numero_Inicio++){
-    console.log("Tabla del " + numero_Inicio);
-    for(Numero_multiplicado = 1; Numero_multiplicado <= 10; Numero_multiplicado++){
-        console.log(numero_Inicio + " x " + Numero_multiplicado + " = " + (numero_Inicio * Numero_multiplicado));
+  for (let numero = inicio; numero <= fin; numero++) {
+    let tabla = [];
+    for (let i = 1; i <= hasta; i++) {
+      tabla.push(`${numero} x ${i} = ${numero * i}`);
     }
-    console.log("\n");
+    resultado.push({
+      numero,
+      tabla
+    });
+  }
+
+  return resultado;
 }
-console.log("Fin de las tablas de multiplicar");
+
+module.exports = tabla_multiplicar;
