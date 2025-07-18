@@ -1,5 +1,5 @@
 // multiplicacion.test.js
-const tabla_multiplicar = require('./multiplicacion');
+const tabla_multiplicar = require('./tabla_multiplicar');
 
 test('Verifica que la tabla del 2 sea correcta', () => {
   const tablas = tabla_multiplicar(2, 2); // solo la tabla del 2
